@@ -1,0 +1,102 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+
+#- story: beginning of flow
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: request_details
+#  - action: user_details_form
+#  - active_loop: user_details_form
+#  - active_loop: null
+#  - action: utter_request_details
+#  - checkpoint: check_asked_question
+
+#- story: handle user affirm
+#  steps:
+#  - checkpoint: check_asked_question
+#  - intent: affirm
+#  - action: action_request_details
+#  - checkpoint: check_flow_finished
+
+#- story: handle user deny
+#  steps:
+#  - checkpoint: check_asked_question
+#  - intent: deny
+#  - action: utter_thanks
+#  - checkpoint: check_flow_finished
+
+- story: happy path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: happy path 2
+  steps:
+  - intent: request_details
+  - action: utter_ask_name
+
+- story: happy path 3
+  steps:
+  - intent: name
+  - action: utter_ask_policy
+
+- story: happy path 4
+  steps:
+  - intent: policy
+  - action: action_request_details
+
+
+#- story: request_details
+#  steps:
+#  - intent: request_details
+#  - action: action_request_details
+
+#- story: name
+#  steps:
+#  - intent: name
+#  - action: user_details_form
+#  - action: action_name
+
+#- story: policy
+#  steps:
+#  - intent: policy
+#  - action: user_details_form
+#  - action: action_policy
+
+
+
+
+
+
+
+

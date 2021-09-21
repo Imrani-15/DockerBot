@@ -1,0 +1,25 @@
+version: '3.0'
+services:
+  rasa:
+    image: rasa/rasa:2.0.0-full
+    ports:
+      - 5005:5005
+    volumes:
+      - ./:/app
+    command:
+      - run
+  Action-Server:
+    image: rasa/rasa-sdk:2.0.0
+    volumes:
+      - ./actions:/app/actions
+  mysql:
+   image: mysql:latest
+#   command: --default-authentication-plugin=mysql_native_password
+#   restart: always
+   environment:
+     - MYSQL_ROOT_PASSWORD="ziba@17"
+  python:
+    image: a6a6a6/python-docker
+
+
+

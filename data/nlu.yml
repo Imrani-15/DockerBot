@@ -1,0 +1,135 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+#- intent: claim_new
+#  examples: |
+#    - submit a new claim
+#    - new claim
+#    - had an accident
+#    - was an incident
+
+- intent: name
+  examples: |
+    - my name is [ramudu](name)
+    - my name is [sitha](name)
+    - [Rakhi](name)
+    - my name is [Siddu](name)
+
+- intent: policy
+  examples: |
+    - [256435](policy)
+    - [526314](policy)
+    - [623401](policy)
+    - [123456](policy)
+    - [564552](policy)
+
+- intent: request_details
+  examples: |
+    - I want to fill the feedback form
+    - fill the feedback form- how to fill the feedback form
+    - what to procedure to give feedback
+
+
+
+#- intent: incident_date
+#  examples: |
+#    - it happened on [March][24],[2019](Date)
+#    - on [06]/[31]/[2019](Date)
+#    - it happened last [Thursday](dayofweek)
+#    - I hit a car on [Monday](dayofweek)
+
+#- intent: incident_reason
+#  examples: |
+#    - I hit the fornt gate(reason)
+#    - ran into a pole(reason)
+

@@ -1,0 +1,109 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - name
+  - policy
+  - request_details
+#  - incident_date
+#  - incident_reason
+
+actions:
+  - action_name
+  - action_policy
+  - action_request_details
+  - utter_thanks
+  - utter_request_details
+  - utter_ask_name
+  - utter_ask_policy
+
+
+slots:
+  name:
+    type: text
+    influence_conversation: false
+  policy:
+    type: text
+    influence_conversation: false
+#  Date:
+#    type: text
+#    auto_fill: false
+#  reason:
+#    type: text
+#    auto_fill: false
+
+
+
+entities:
+  - name
+  - policy
+#  - Date
+#  - dayofweek
+#  - reason
+
+responses:
+  utter_greet:
+  - text: "Greetings. How is going it?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Thank you. That is all we need for now. We will contact you if there are more questions. Goodbye."
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_name:
+  - text: "Please provide your name."
+
+  utter_ask_policy:
+  - text: "Please provide your policy number."
+
+  utter_request_details:
+  - text: "These are the values that you provided say yes or no to confirm:\n name: {name}\n policy: {policy}"
+
+  utter_thanks:
+  - text: "Thanks for your valuable time."
+
+#  utter_incident_date:
+#  - text: "Describe what happened in the incident."
+
+#  utter_incident_reason:
+#  - text: "Thank you. That is all we need for now. We will contact you if there are more question."
+
+forms:
+  user_details_form:
+    name:
+      - type: from_entity
+        entity: name
+    policy:
+      - type: from_entity
+        entity: policy
+#    date:
+#      - type: from_entity
+#        entity: Date
+#    reason:
+#      - type: from_entity
+#        entity: reason
+
+#forms:
+#  - user_details_form
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
